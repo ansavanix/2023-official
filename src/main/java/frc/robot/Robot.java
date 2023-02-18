@@ -7,12 +7,23 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
+//import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.GenericHID;
+import frc.robot.Commands.DriveCmd;
+import frc.robot.Commands.ExtenderCmd;
+import frc.robot.Subsystems.DriveSys;
+import frc.robot.Subsystems.ExtenderSys;
 
 public class Robot extends TimedRobot {
 
+  public static final DriveSys driveSubsystem = new DriveSys();
+  public static final ExtenderSys extenderSubsystem = new ExtenderSys();
+  public static final GenericHID controller = new GenericHID(Constants.MAIN_CONTROLLER_PORT_ID);
+
   @Override
   public void robotInit() {
-
+      driveSubsystem.setDefaultCommand(new DriveCmd());
+      extenderSubsystem.setDefaultCommand(new ExtenderCmd());
   }
 
   @Override
