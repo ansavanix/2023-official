@@ -6,6 +6,9 @@ public class Constants {
     public static final int PDP_ID = 1;
     public static final int PNUEMATIC_HUB_ID = 2;
 
+    //Pneumatics
+    public static final int DOUBLE_SOLENOID_LIFT_FWD = 0;
+    public static final int DOUBLE_SOLENOID_LIFT_REV = 1;
 
     /* Drivetrain */
     //Drive Motor CAN IDs
@@ -53,4 +56,5 @@ public class Constants {
     public static final int MAIN_LEFT_HORIZONTAL_JOYSTICK_AXIS = 0;
     public static final int MAIN_A_BUTTON = 1;
     public static final int MAIN_B_BUTTON = 2;
+    public static final int MAIN_X_BUTTON = 3;
 }
