@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import frc.robot.Commands.DriveCmd;
 import frc.robot.Commands.PneumaticCmd;
 import frc.robot.Commands.SetExtenderCmd;
+import frc.robot.Commands.ExtenderCmd;
 import frc.robot.Subsystems.DriveSys;
 import frc.robot.Subsystems.ExtenderSys;
 import frc.robot.Subsystems.PneumaticSys;
@@ -25,7 +26,7 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
       driveSubsystem.setDefaultCommand(new DriveCmd());
-      extenderSubsystem.setDefaultCommand(new SetExtenderCmd());
+      extenderSubsystem.setDefaultCommand(new ExtenderCmd());
       pneumaticSubsystem.setDefaultCommand(new PneumaticCmd());
   }
 

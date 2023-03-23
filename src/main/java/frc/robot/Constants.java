@@ -28,23 +28,30 @@ public class Constants {
     public static final int EXTENDER_RIGHT_MOTOR_ID = 8;
 
     //Invert Extender Motors
-    public static final boolean LEFT_EXTENDER_INVERTED = false;
-    public static final boolean RIGHT_EXTENDER_INVERTED = true;
+    public static final boolean LEFT_EXTENDER_INVERTED = true;
+    public static final boolean RIGHT_EXTENDER_INVERTED = false;
+
+    public static final boolean EXTEDNER_MOTOR_BRAKE = true;
 
     //Extender Power Percentage
-    public static final double EXTENDER_POWER_PERCENTAGE = 0.1; 
+    public static final double EXTENDER_POWER_PERCENTAGE = 0.35; 
 
     //Extender Setpoints (revolutions)
     public static final double EXTENDER_START_POS = 0.0;
-    public static final double EXTENDER_LOW_POS = 12.0;
-    public static final double EXTENDER_MID_POS = 24.0;
-    public static final double EXTENDER_HIGH_POS = 36.0;
+    public static final double EXTENDER_LOW_POS = 6.0;
+    public static final double EXTENDER_MID_POS = 6.0;
+    public static final double EXTENDER_HIGH_POS = 6.0;
 
     //Extender PID Values
-    public static final double EXTENDER_KP = 0.0;
-    public static final double EXTENDER_KI = 0.0;
-    public static final double EXTENDER_KD = 0.0;
-    public static final double EXTENDER_TOLERANCE = 0.2;
+        //KC = 2.0
+        //PC = 0.14
+        //KP = 0.6 * KC = 1.2
+    public static final double EXTENDER_KP = 1.2;
+        //KI = 2 * (KP / PC) = 17.1428571429
+    public static final double EXTENDER_KI = 17.1428571429;
+        //KD = 0.125 * KP * PC = 0.021
+    public static final double EXTENDER_KD = 0.021;
+    public static final double EXTENDER_TOLERANCE = 0.5;
 
 
     /* Control Systems */
@@ -57,4 +64,6 @@ public class Constants {
     public static final int MAIN_A_BUTTON = 1;
     public static final int MAIN_B_BUTTON = 2;
     public static final int MAIN_X_BUTTON = 3;
+    public static final int MAIN_LEFT_BUTTON = 5;
+    public static final int MAIN_RIGHT_BUTTON = 6;
 }
